@@ -2,3 +2,4 @@ node_modules
 content/blog/temp*/
 public/page-data/temp*/
 public/temp*/
+.cache
