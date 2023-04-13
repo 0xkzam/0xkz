@@ -1,0 +1,108 @@
+/**
+Allow inline code blocks to break
+ --------------------------------------------- */
+
+:not(pre) > code[class*='language-'] {
+    white-space: normal;
+}
+
+/*
+    Custom Styling Of Code Titles
+  --------------------------------------------- */
+
+.gatsby-code-title {
+    margin-bottom: -0.6rem;
+    padding: 0.5em 1em;
+    font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+        'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+        'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+        monospace;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+    z-index: 0;
+    background-color: rgba(255, 109, 91, 0.99);
+}
+
+/**
+* Remove the default PrismJS theme background-color, border-radius, margin,
+* padding and overflow.
+* 1. Make the element just wide enough to fit its content.
+* 2. Always fill the visible space in .gatsby-highlight.
+* 3. Adjust the position of the line numbers
+*/
+.gatsby-highlight pre[class*='language-'] {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    overflow: initial;
+    float: left; /* 1 */
+    min-width: 100%; /* 2 */
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+    color: #475861; /*More accessible than the default with our background*/
+}
+
+.gatsby-highlight {
+    background-color: #fdf6e3;
+}
+
+/* Adjust the position of the line numbers */
+.gatsby-highlight pre[class*='language-'].line-numbers {
+    padding: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2.8em;
+}
+
+/* If you only want to use line numbering */
+.gatsby-highlight {
+    border-radius: 0.3em;
+    margin: 0.5em 0;
+    padding: 1em;
+    overflow: auto;
+}
+
+.gatsby-highlight pre[class*='language-'].line-numbers {
+    padding: 0;
+    padding-left: 2.8em;
+    overflow: initial;
+}
+
+.gatsby-highlight pre[class*='language-'].line-numbers-rows {
+    padding: 0;
+    padding-left: 2.8em;
+}
+
+.gatsby-highlight-code-line {
+    display: block;
+    margin-right: -1em;
+    margin-left: -1em;
+    padding-right: 1em;
+    padding-left: 0.75em;
+    background-color: #ffc5c5;
+    border-left: 0.25em solid #f99;
+}
+
+/*
+  SELECTIONS
+--------------------------------------------- */
+
+/* Styling inline code selections
+Overrides Prisma
+*/
+p > code[class*='language-']::selection,
+p > code[class*='language-'] ::selection {
+    background: rgba(255, 109, 91, 0.8);
+    text-shadow: none;
+}
+
+/* Styling code block selections
+Overrides Prisma
+*/
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection {
+    background: rgba(255, 109, 91, 0.5);
+    text-shadow: none;
+}
