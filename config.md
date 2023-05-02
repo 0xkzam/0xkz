@@ -1,0 +1,7 @@
+[title]: <> (0xkz's blog)
+[icon]: <> (http://vitalik.ca/images/icon.png)
+[server]: <> (root@localhost)
+[website_root]: <> (/Library/WebServer/Documents)
+[posts_directory]: <> (general)
+[homepage_category]: <> (general)
+[domain]: <> (http://localhost:8080/)
