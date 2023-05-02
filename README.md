@@ -1,2 +1,2 @@
 
-This is a folk of https://github.com/vbuterin/blogmaker
+This is a folk of [vbuterin/blogmaker](https://github.com/vbuterin/blogmaker).
